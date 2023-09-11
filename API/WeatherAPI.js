@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 export default function WeatherAPI() {
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState([]);
   const [search, setSearch] = useState('kathmandu');
   const API = ``;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${API}`;
