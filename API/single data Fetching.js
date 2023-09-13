@@ -23,7 +23,7 @@ export default function App() {
     <div>
  
       
-       <h1>{users[0].username}</h1>
+        <li>{users.length > 0? users[0].username : ''}</li>
             
         
     </div>
