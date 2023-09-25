@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function App() {
+export default function Form() {
   const[text,setText] = useState('');
   const uppercase = () => {
     setText(text.toUpperCase());
