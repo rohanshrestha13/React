@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function Form() {
+export default function App() {
   const[text,setText] = useState('');
   const uppercase = () => {
     setText(text.toUpperCase());
@@ -12,12 +12,9 @@ export default function Form() {
   const clear = () => {
     setText('');
   }
-  const tooglecase = () => {
-    setText(
-      text.toLowerCase() === text
-        ? text.toUpperCase()
-        : text.toLowerCase()
-    );
+  const copy = () => {
+   navigator.clipboard.writeText(text);
+   alert('Copied!');
   };
   return (
     <div>
@@ -27,7 +24,7 @@ export default function Form() {
       <p>Character Length: {text.length}</p>
       <button onClick={uppercase}>Uppercase</button>
       <button onClick={lowercase}>Lowercase</button>
-      <button onClick={tooglecase}>Change Case</button>
+      <button onClick={copy}>Copy</button>
       <button onClick={clear}>Clear</button>
     </div>
   )
